@@ -1,0 +1,26 @@
+{
+  "name": "rollup-plugin-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/bundle.js",
+    "dev": "nodemon dist/bundle.js",
+    "build": "rollup -c -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanKr/rollup-plugin-playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NathanKr/rollup-plugin-playground/issues"
+  },
+  "homepage": "https://github.com/NathanKr/rollup-plugin-playground#readme",
+  "devDependencies": {
+    "rollup": "^3.23.0"
+  }
+}
