@@ -2,7 +2,7 @@
   "name": "rollup-plugin-playground",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "type": "module",
   "scripts": {
     "start": "node dist/bundle.js",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/NathanKr/rollup-plugin-playground#readme",
   "devDependencies": {
+    "@rollup/plugin-json": "^6.0.0",
     "rollup": "^3.23.0"
   }
 }

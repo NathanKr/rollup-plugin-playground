@@ -1,7 +1,10 @@
+import json from '@rollup/plugin-json';
+
 export default {
-	input: 'src/index.js',
+	input: 'src/main.js',
 	output: {
 		file: 'dist/bundle.js',
 		format: 'es'
-	}
+	},
+	plugins: [json()]
 };
