@@ -23,5 +23,8 @@
   "devDependencies": {
     "@rollup/plugin-json": "^6.0.0",
     "rollup": "^3.23.0"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.8"
   }
 }

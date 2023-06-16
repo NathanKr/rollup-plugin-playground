@@ -23,3 +23,13 @@ step 3 - use the plugin in code
 import { version } from '../package.json'; 
 console.log(`version : ${version}`);
 ```
+
+<h2>Using import</h2>
+
+simple add in rollup.config.js
+
+```
+	external: ['dayjs']
+```
+
+note that this will create a node_module directory on dist
