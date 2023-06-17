@@ -54,5 +54,5 @@ export default
 
 now all the code is inside src/main.js
 
-<h3>popen issues for @rollup/plugin-node-resolve</h3>
+<h3>open issues for @rollup/plugin-node-resolve</h3>
 it is not working for dayjs
