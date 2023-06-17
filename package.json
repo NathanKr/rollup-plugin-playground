@@ -26,6 +26,6 @@
   },
   "dependencies": {
     "@rollup/plugin-node-resolve": "^15.1.0",
-    "dayjs": "^1.11.8"
+    "the-answer": "^1.0.0"
   }
 }

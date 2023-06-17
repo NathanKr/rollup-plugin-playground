@@ -31,24 +31,28 @@ console.log(`version : ${version}`);
 <p>the solution is to put all code inside dist directory . this is suppose to be done by @rollup/plugin-node-resolve but currently it does not happen</p>
 
 <h3>Setup</h3>
-add the following to an array in rollup.config.js
+install the pluggin
+```
+  npm i @rollup/plugin-node-resolve
+```
+
+inside rollup.config.js
 
 ```
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+
+export default 
   {
-    input: "node_modules/dayjs/dayjs.min.js",
+    input: "src/main.js",
     output: {
-      dir: "dist",
+      file: "dist/bundle.js",
       format,
     },
-    plugins: [nodeResolve()],
-  },
+    plugins: [nodeResolve(),json()],
+  }
 ```
 
+now all the code is inside src/main.js
+
 <h3>popen issues for @rollup/plugin-node-resolve</h3>
-<p>although i can run main.js which uses dayjs i get errors on the build
-<ol>
-<li>(!) "this" has been rewritten to "undefined"</li>
-<li>(!) Unresolved dependencies</li>
-</ol>
-and dist still does not include the node_module directory, nor is it squizzed into main.js
-</p>
+it is not working for dayjs
