@@ -6,4 +6,5 @@ console.log(`version : ${version}`);
 
 console.log('in main.js ...');
 console.log(`sum(1,2) : ${sum(1,2)}`);
-console.log(dayjs());
+
+console.log(`tomorrow : ${dayjs().add(1,'day')}`);

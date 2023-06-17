@@ -24,12 +24,31 @@ import { version } from '../package.json';
 console.log(`version : ${version}`);
 ```
 
-<h2>Using import</h2>
+<h2>Using plugin-node-resolve</h2>
+<h3>Motivation</h3>
+<p>In many project you import packages from node_modules , but install and import is not enough. Try it yourself and get <a href='https://rollupjs.org/troubleshooting/#warning-treating-module-as-external-dependency'>(!) Unresolved dependencies</a></p>
+<p>You can use this using external as i did <a href='https://github.com/NathanKr/rollup-playground'>rollup-playground (ver 1.2)</a> but this is not a good solution for production</p>
+<p>the solution is to put all code inside dist directory . this is suppose to be done by @rollup/plugin-node-resolve but currently it does not happen</p>
 
-simple add in rollup.config.js
+<h3>Setup</h3>
+add the following to an array in rollup.config.js
 
 ```
-	external: ['dayjs']
+  {
+    input: "node_modules/dayjs/dayjs.min.js",
+    output: {
+      dir: "dist",
+      format,
+    },
+    plugins: [nodeResolve()],
+  },
 ```
 
-note that this will create a node_module directory on dist
+<h3>popen issues for @rollup/plugin-node-resolve</h3>
+<p>although i can run main.js which uses dayjs i get errors on the build
+<ol>
+<li>(!) "this" has been rewritten to "undefined"</li>
+<li>(!) Unresolved dependencies</li>
+</ol>
+and dist still does not include the node_module directory, nor is it squizzed into main.js
+</p>
